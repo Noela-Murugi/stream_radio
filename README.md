@@ -12,6 +12,8 @@ This projects aim is to enable radio streaming from several radio stations.
 *Clone the repository: [git clone https://github.com/Noela-Murugi/stream_radio.git]<br>
 *Change Directory: [cd stream_radio]<br>
 *Open index.html file on your browser
+# Known Bugs
+There are no known bugs of this project at the moment.
 # Live Page
 ***************************************
 <!-- https://Noela-Murugi.github.io/stream_radio/-->
