@@ -5,8 +5,6 @@ const controlButton = document.querySelector('.playBtn');
 const currentChannel = document.querySelector('.current-channel');
 const popupMessage = document.querySelector('.popup');
 
-
-
 const stationsData = [
   {
     id: 1,
@@ -82,7 +80,7 @@ const stationsData = [
       setTimeout(removePopupMessage, 3000);
     });
 
-//list of ststions event Listner
+//list of stations event Listner
     stationsList.addEventListener('click',e=>{
       stationListItemCLicked(e);
     });
