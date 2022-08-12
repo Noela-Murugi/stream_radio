@@ -15,8 +15,9 @@ This projects aim is to enable radio streaming from several radio stations.
 # Known Bugs
 There are no known bugs of this project at the moment.
 # Live Page
-***************************************
-<!-- https://Noela-Murugi.github.io/stream_radio/-->
+https://noela-murugi.github.io/stream_radio/
+# Support 
+Show support by giving this project a star ⭐ ⭐ 😃
 # Contact Informantion
 Incase of any enquiries or contributions, be sure to email me at [noela.murugi@student.moringaschool.com]
 # License
