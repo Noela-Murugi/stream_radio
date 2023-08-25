@@ -29,9 +29,9 @@ const stationsData = [
 
   {
     id: 4,
-    name: 'Kameme FM',
-    url : 'https://stream.zenolive.com/wxn43ghqtceuv',
-    logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRm94RRqfLKLytrpVx0gn8DfwbhhQ7pVxah_OUwY-HQoQ&s'
+    name: 'Hot 96',
+    url : 'https://hot96-atunwadigital.streamguys1.com/hot96',
+    logo: 'https://cdn.webrad.io/images/logos/radio-or-ke/hot96.png'
   },
 
   {
