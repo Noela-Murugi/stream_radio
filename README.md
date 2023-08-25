@@ -1,25 +1,31 @@
-# stream_radio
-# Author
+# Stream_radio
+
+## Author
 Noela Murugi
-# Description
+
+## Description
 This projects aim is to enable radio streaming from several radio stations.
-# Technologies Used
-*HTML<br>
-*CSS<br>
-*JavaScript<br>
-# Setup instructions
-*Open the Terminal command line: [CTRL+ALT+T]<br>
-*Clone the repository: [git clone https://github.com/Noela-Murugi/stream_radio.git]<br>
-*Change Directory: [cd stream_radio]<br>
-*Open index.html file on your browser
+
+## Technologies Used
++ HTML<br>
++ CSS<br>
++ JavaScript<br>
+
+## Setup instructions
++ Open the Terminal command line: [CTRL+ALT+T]<br>
++ Clone the repository: [git clone https://github.com/Noela-Murugi/stream_radio.git]<br>
++ Change Directory: [cd stream_radio]<br>
++ Open index.html file on your browser
+  
 # Known Bugs
 There are no known bugs of this project at the moment.
+
 # Live Page
-https://noela-murugi.github.io/stream_radio/
-# Support 
-Show support by giving this project a star ⭐ ⭐ 😃
+[RadioStream😃](https://stream-radio.vercel.app/)
+
 # Contact Informantion
-Incase of any enquiries or contributions, be sure to email me at [noela.murugi@student.moringaschool.com]
+Incase of any enquiries or contributions, be sure to email me at [noelatrixie@gmail.com]
+
 # License
 
 MIT License
