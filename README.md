@@ -12,10 +12,16 @@ This projects aim is to enable radio streaming from several radio stations.
 + JavaScript<br>
 
 ## Setup instructions
-+ Open the Terminal command line: [CTRL+ALT+T]<br>
-+ Clone the repository:
-``[git clone https://github.com/Noela-Murugi/stream_radio.git]<br>``
-+ Change Directory: [cd stream_radio]<br>
++ Open the Terminal command line
+  
++ Clone the repository
+```
+git clone https://github.com/Noela-Murugi/stream_radio.git
+```
++ Change Directory
+```
+cd stream_radio
+```
 + Open index.html file on your browser
   
 ## Known Bugs
