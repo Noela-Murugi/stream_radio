@@ -17,16 +17,16 @@ This projects aim is to enable radio streaming from several radio stations.
 + Change Directory: [cd stream_radio]<br>
 + Open index.html file on your browser
   
-# Known Bugs
+## Known Bugs
 There are no known bugs of this project at the moment.
 
-# Live Page
+## Live Page
 [RadioStream😃](https://stream-radio.vercel.app/)
 
-# Contact Informantion
-Incase of any enquiries or contributions, be sure to email me at [noelatrixie@gmail.com]
+## Contact Informantion
+Incase of any enquiries or contributions, be sure to email me at : noelatrixie@gmail.com
 
-# License
+## License
 
 MIT License
 
