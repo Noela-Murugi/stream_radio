@@ -28,7 +28,7 @@ cd stream_radio
 There are no known bugs of this project at the moment.
 
 ## Live Page
-[RadioStream😃](https://stream-radio.vercel.app/)
+[RadioStream😃](https://stream-radio-noela-murugi.vercel.app/)
 
 ## Contact Informantion
 Incase of any enquiries or contributions, be sure to email me at : noelatrixie@gmail.com
