@@ -47,27 +47,109 @@ const stationsData = [
       url : 'https://node-18.zeno.fm/t2wky7h647zuv?rj-ttl=5&rj-tok=AAABeukC3m4ArY80_tysT_zfAg',
       logo: 'https://cdn.webrad.io/images/logos/radio-or-ke/ghetto.png'
   },
+
+  {
+  id: 7,
+  name: 'Radio Jambo',
+  url: 'http://radiojambo-atunwadigital.streamguys1.com/radiojambo',
+  logo: 'https://cdn.webrad.io/images/logos/radio-or-ke/jambo.png'
+},
+
+  {
+  id: 8,
+  name: 'Capital FM',
+  url: 'http://capitalfm-atunwadigital.streamguys1.com/capitalfm',
+  logo: 'https://cdn.webrad.io/images/logos/radio-or-ke/capital.png'
+},
+
+{
+  id: 9,
+  name: 'Kameme FM',
+  url: 'http://kamemefm-atunwadigital.streamguys1.com/kamemefm',
+  logo: 'https://cdn.webrad.io/images/logos/radio-or-ke/kameme.png'
+},
+
+{
+  id: 10,
+  name: 'Ramogi FM',
+  url: 'http://ramogifm-atunwadigital.streamguys1.com/ramogifm',
+  logo: 'https://cdn.webrad.io/images/logos/radio-or-ke/ramogi.png'
+},
+
+{
+  id: 11,
+  name: 'Musya FM',
+  url: 'http://musyifm-atunwadigital.streamguys1.com/musyifm',
+  logo: 'https://cdn.webrad.io/images/logos/radio-or-ke/musyi.png'
+},
+
+{
+  id: 12,
+  name: 'Mulembe FM',
+  url: 'http://mulembefm-atunwadigital.streamguys1.com/mulembefm',
+  logo: 'https://cdn.webrad.io/images/logos/radio-or-ke/mulembe.png'
+},
+
+{
+  id: 13,
+  name: 'Sulwe FM',
+  url: 'http://sulwefm-atunwadigital.streamguys1.com/sulwefm',
+  logo: 'https://cdn.webrad.io/images/logos/radio-or-ke/sulwe.png'
+},
+
+{
+  id: 14,
+  name: 'Meru FM',
+  url: 'http://merufm-atunwadigital.streamguys1.com/merufm',
+  logo: 'https://cdn.webrad.io/images/logos/radio-or-ke/meru-fm.png'
+},
+
+{
+  id: 15,
+  name: 'Nation FM',
+  url: 'http://nationfm-atunwadigital.streamguys1.com/nationfm',
+  logo: 'https://cdn.webrad.io/images/logos/radio-or-ke/nation.png'
+}
+
 ];
 
 
 //Event Listeners
+
   document.addEventListener('DOMContentLoaded', ()=>{
     let listHTML = '';
 
-    stationsData.forEach(listItem =>{
-      listHTML += `
-      <div class="station-item" id="${listItem.id}">
-        <img src="${listItem.logo}">
-        <label>${listItem.name}</label>
+    // stationsData.forEach(listItem =>{
+    //   listHTML += `
+    //   <div class="station-item" id="${listItem.id}">
+    //     <img src="${listItem.logo}">
+    //     <label>${listItem.name}</label>
+    //     <i class="station-play fa fa-play" data-id="${listItem.id}"></i>
+    //   </div>
+    //   `;
+    // });
+
+
+    stationsData.forEach(listItem => {
+  listHTML += `
+    <div class="station-item" id="${listItem.id}">
+      <div class="station-thumb">
+        <img src="${listItem.logo}" alt="${listItem.name}" class="station-logo" data-id="${listItem.id}">
+        <i class="station-play fa fa-play" data-id="${listItem.id}"></i>
       </div>
-      `;
-    });
+      <label>${listItem.name}</label>
+    </div>
+  `;
+});
+
 
     stationsList.innerHTML = listHTML;
 
     console.log(controlButton);
 
   });
+
+
 
 
 //check offline status
@@ -100,8 +182,81 @@ const stationsData = [
     controlBtnCLicked(e);
   });
 
+    //additional eventlistener
+
+//   stationsList.addEventListener('click', e => {
+//   const clickedIcon = e.target.closest('.station-play');
+//   if (!clickedIcon) return;
+
+//   const id = parseInt(clickedIcon.dataset.id) - 1;
+//   const station = stationsData[id];
+
+//   if (station) {
+//     player.src = station.url;
+//     currentChannel.textContent = station.name;
+//     player.setAttribute('autoplay', 'true');
+//     playStream();
+//   }
+// });
+
+// stationsList.addEventListener('click', e => {
+//   const clicked = e.target;
+
+//   // Check if play icon or image was clicked
+//   if (clicked.classList.contains('station-play') || clicked.classList.contains('station-logo')) {
+//     const id = parseInt(clicked.dataset.id) - 1;
+//     const station = stationsData[id];
+
+//     if (station) {
+//       player.src = station.url;
+//       currentChannel.textContent = station.name;
+//       player.setAttribute('autoplay', 'true');
+//       playStream();
+//     }
+//   }
+// });
+
+
+
+
+
+
+
+
+
+
+
+
+stationsList.addEventListener('click', e => {
+  const playIcon = e.target.closest('.station-play');
+  const logo = e.target.closest('.station-logo');
+  const stationItem = e.target.closest('.station-item');
+
+  let id = null;
+
+  if (playIcon || logo) {
+    id = parseInt((playIcon || logo).dataset.id);
+  } else if (stationItem) {
+    id = parseInt(stationItem.id);
+  }
+
+  if (id !== null) {
+    const station = stationsData.find(st => st.id === id);
+    if (station) {
+      player.src = station.url;
+      currentChannel.textContent = station.name;
+      player.setAttribute('autoplay', 'true');
+      playStream();
+    }
+  }
+});
+
+
+
+
 
   //Function to initiate playing of the radio stream)
+
   function stationListItemCLicked(e){
     if(e.target.classList.contains('station-item')){
       const id = e.target.id-1;
@@ -111,6 +266,18 @@ const stationsData = [
       playStream();
     }
   }
+
+//   function stationListItemCLicked(e) {
+//   const stationItem = e.target.closest('.station-item');
+//   if (!stationItem) return;
+
+//   const id = parseInt(stationItem.id) - 1;
+//   player.setAttribute('autoplay', 'true');
+//   player.src = stationsData[id].url;
+//   setCurrentChannelLabel(id);
+//   playStream();
+// }
+
 
   //change player channel name
   function setCurrentChannelLabel(id){
@@ -147,7 +314,8 @@ const stationsData = [
     player.play()
       .catch(error=>{
         displayPopupMessage('Sorry, an error occured in playing the audio');
-        setTimeout(removePopupMessage(), 3000);
+        // setTimeout(removePopupMessage(), 3000);
+        setTimeout(removePopupMessage, 3000);
         console.log(error);
       });
     controlButton.classList.remove('fa-play');
@@ -160,5 +328,4 @@ const stationsData = [
     controlButton.classList.add('fa-play');
     controlButton.classList.remove('fa-pause');
   }
-
 

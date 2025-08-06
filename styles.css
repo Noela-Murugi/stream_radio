@@ -55,11 +55,13 @@
   }
 
 
-  .playBtn{
+.playBtn{
     color: var(--fx-white-color);
     font-size: 2rem;
     transition: .5s;
   }
+
+
 
   .playBtn:hover{
     transform: scale(1.2);
@@ -164,3 +166,211 @@
   .popup-show{
     transform: translateY(0);
   }
+
+
+
+
+  .station-thumb {
+  position: relative;
+  display: inline-block;
+}
+
+.station-play {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 2rem;
+  color: #00e676; /* Lime green (vibrant, clear on both dark/light) */
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: auto;
+  cursor: pointer;
+}
+
+.station-thumb:hover .station-play {
+  opacity: 1;
+}
+
+.station-logo {
+  cursor: pointer;
+}
+
+
+/* .station-play:hover {
+  transform: scale(1.2);
+  color: limegreen;
+} */
+
+.station-play:hover {
+  transform: translate(-50%, -50%) scale(1.2);
+}
+
+
+.station-item {
+  cursor: pointer;
+}
+
+.station-play {
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+/* === Station Grid Container === */
+/* .stations {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1.5rem;
+} */
+
+
+/* .stations {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  padding: 2rem;
+  justify-items: center;
+} */
+
+
+.stations {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 44px;
+  padding: 40px 20px;
+  justify-items: center;
+}
+
+
+.station-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: #fff;
+  border-radius: 12px;
+  padding: 1rem;
+  width: 100%;
+  max-width: 260px;
+  position: relative;
+  transition: transform 0.2s ease;
+  cursor: pointer;
+}
+
+.station-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 14px rgba(0,0,0,0.2);
+
+}
+
+
+.station-item img {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.station-item span {
+  font-size: 16px;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+
+
+/* === Station Card Item === */
+/* .station-item {
+  flex: 1 1 calc(25% - 1rem);
+  background: #fff;
+  border-radius: 10px;
+  padding: 1rem;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  position: relative;
+  cursor: pointer;
+}
+
+.station-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 14px rgba(0,0,0,0.2);
+} */
+
+/* === Station Logo Image === */
+.station-logo {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  margin-bottom: 0.5rem;
+  border-radius: 6px;
+}
+
+/* === Station Play Icon === */
+.station-play {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.8);
+  font-size: 2rem;
+  color: #00e676;
+  opacity: 0;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  pointer-events: auto;
+}
+
+.station-item:hover .station-play {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1.2);
+}
+
+/* === Responsive Grid === */
+@media screen and (max-width: 1024px) {
+  .station-item {
+    flex: 1 1 calc(33.333% - 1rem); /* 3 per row */
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .station-item {
+    flex: 1 1 calc(50% - 1rem); /* 2 per row */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .station-item {
+    flex: 1 1 100%; /* 1 per row */
+  }
+}
+
+.station-thumb {
+  position: relative;
+  display: inline-block;
+}
+
+
+
+/* .station-item img {
+  max-width: 100%;
+  max-height: 60px;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto;
+} */
+
+
+/* .station-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 120px;
+} */
+
+
+.station-item .logo-container {
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
